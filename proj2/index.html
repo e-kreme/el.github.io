@@ -4,21 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/9fcd540961.js" crossorigin="anonymous"></script>
     <title>Andrea Valencia</title>
 </head>
 <body>
-    <header>
-        <nav id="menu">
-            <a href="index.html">HOME</a>
-            <a href="#about">ABOUT ME</a>
-            <a href="#work">MY WORK</a>
-            <a href="#education">EDUCATION</a>
-            <a href="#experience">EXPERIENCE</a>
-            <a href="#interests">INTERESTS</a>
-            <a href="#contact">CONTACT</a>
-        </nav>
-        <img src="img/portrait.jpg" alt="Photo of me">
-        <h1>Andrea Valencia</h1>
+    <header>     
+        <ul id="menu">
+            <li><a href="https://kremenkova.github.io/proj2/index.html"><img src="img/logo.png" alt="logo"></a></li>
+            <li><a href="#about">ABOUT ME</a></li>
+            <li><a href="#work">MY WORK</a></li>
+            <li><a href="#education">EDUCATION</a></li>
+            <li><a href="#experience">EXPERIENCE</a></li>
+            <li><a href="#interests">INTERESTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+        <div id="title">            
+            <div>
+                <h1><a href="https://kremenkova.github.io/proj2/index.html">Andrea Valencia</a></h1>
+                <ul>
+                    <li><i class="fa-solid fa-phone"></i> +44 123 456 7890</li>
+                    <li><i class="fa-solid fa-envelope"></i> andrea.valencia@gmail.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i> London, UK</li>
+                </ul>
+                <div class="soc-med">
+                    <ul>
+                        <li><a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram"></i></a></li>
+                        <li><a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook"></i></a></li>
+                        <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="https://twitter.com/"><i class="fa-brands fa-square-x-twitter"></i></a></li>
+                        <li><a href="https://pinterest.com/"><i class="fa-brands fa-square-pinterest"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <img src="img/portrait.jpg" alt="Photo of me" id="my_photo">
+        </div>
     </header>
 
     <main>
@@ -33,7 +53,30 @@
 
         <section id="work">
             <h2>My work</h2>
-            <p>imgs (možnost posouvání)</p>
+            <div class="slide-show">
+                <div class="slide"><img src="img/work_1.jpg" alt="work_1"></div>
+                <div class="slide"><img src="img/work_2.jpg" alt="work_2"></div>
+                <div class="slide"><img src="img/work_3.jpg" alt="work_3"></div>
+                <div class="slide"><img src="img/work_4.jpg" alt="work_3"></div>
+                <div class="slide"><img src="img/work_5.jpg" alt="work_3"></div>
+                <div class="slide"><img src="img/work_6.jpg" alt="work_3"></div>
+                <div class="slide"><img src="img/work_7.jpg" alt="work_3"></div>
+                <div class="slide"><img src="img/work_8.jpg" alt="work_3"></div>
+                <div class="slide"><img src="img/work_9.jpg" alt="work_3"></div>
+                <div class="slide"><img src="img/work_10.jpg" alt="work_3"></div>
+                <div class="all-img">
+                    <div><img class="small-img  " src="img/work_1.jpg" alt="work_1" onclick="displayed(1)"></div>
+                    <div><img class="small-img  " src="img/work_2.jpg" alt="work_2" onclick="displayed(2)"></div>
+                    <div><img class="small-img  " src="img/work_3.jpg" alt="work_3" onclick="displayed(3)"></div>
+                    <div><img class="small-img  " src="img/work_4.jpg" alt="work_4" onclick="displayed(4)"></div>
+                    <div><img class="small-img  " src="img/work_5.jpg" alt="work_5" onclick="displayed(5)"></div>
+                    <div><img class="small-img  " src="img/work_6.jpg" alt="work_6" onclick="displayed(6)"></div>
+                    <div><img class="small-img  " src="img/work_7.jpg" alt="work_7" onclick="displayed(7)"></div>
+                    <div><img class="small-img  " src="img/work_8.jpg" alt="work_8" onclick="displayed(8)"></div>
+                    <div><img class="small-img  " src="img/work_9.jpg" alt="work_9" onclick="displayed(9)"></div>
+                    <div><img class="small-img  " src="img/work_10.jpg" alt="work_10" onclick="displayed(10)"></div>
+                </div>                
+            </div>
         </section>
 
         <section id="education">
@@ -114,11 +157,26 @@
 
         <section id="contact">
             <h2>Contact</h2>
+            <ul>
+                <li><i class="fa-solid fa-phone"></i> +44 123 456 7890</li>
+                <li><i class="fa-solid fa-envelope"></i> andrea.valencia@gmail.com</li>
+                <li><i class="fa-solid fa-location-dot"></i> London, UK</li>
+            </ul>
+            <div class="soc-med">
+                <ul>
+                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://twitter.com/"><i class="fa-brands fa-square-x-twitter"></i></a></li>
+                    <li><a href="https://pinterest.com/"><i class="fa-brands fa-square-pinterest"></i></a></li>
+                </ul>
+            </div>
         </section>
     </main>
 
     <footer>
-
+        <p>Eliška Křeménková - xkremee00</p>
+        <p>ITW project 2 - 2024</p>
     </footer>
 </body>
 </html>

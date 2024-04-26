@@ -1,3 +1,9 @@
+/*
+* author: Eliška Křeménková
+* login: xkremee00
+* file: ITW - project 2
+*/
+
 /* Color pallete
 * #E8A142 - orange
 * #9FBF5A - light green
@@ -6,31 +12,339 @@
 * #FCF5EC - light
 */
 
-/*************************************** PC layout ***************************************/
-/* bg-image */
-body{
-    background-image: url("img/bg-img.jpg");
-    background-size: contain;
-    background-repeat: repeat;
-    background-attachment: fixed;
-}
 /* font */
 body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 20px;
+    font-size: 1.2rem;
 }
-@font-face {
+body a{
+    text-decoration: none;
+    color: #272B29;
+}
+@font-face{
     font-family: 'Amatic SC';
     src: url("fonts/AmaticSC-Regular.ttf") format("truetype");
 }
-nav, h1, h2{
+#menu, h1, h2{
     font-family: 'Amatic SC', sans-serif;
-    font-size: 50px;
-    font-weight: 500;
+    font-size: 4rem;
+    font-weight: bold;
+}
+h2{
+    font-size: 3rem;
+}
+#menu a{
+    font-size: 2rem;    
+    font-weight: bold;
+}
+#title ul{
+    font-size: 1rem;
+}
+/* general style */
+h3{
+    border-bottom: 3px solid #038C5A;
+}
+h4{
+    border-bottom: 2px solid #9FBF5A;
+    width: fit-content;
 }
 
+/* header */
+/* menu */
+#menu{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 11rem;
+    height: 101%;
+    position: fixed;    
+    margin: -10px;
+    list-style-type: none;
+    padding: 13rem 0 0 2rem;
+    box-shadow: 10px -10px 20px #272B29;
+    z-index: 5;
+}
+#menu a{
+    transition: linear 0.5s;
+    position: relative;
+}
+#menu a:hover{
+    color: #038C5A;
+    transition: linear 0.5s;
+}
+#menu a::before{
+    transition: 300ms;
+    height: 2px;
+    content: "";
+    position: absolute;
+    background-color: #038C5A;
+    width: 0%;
+    bottom: -2px;
+}
+#menu a:hover::before{
+    width: 100%;
+}
+#menu img{
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 170px;
+    size: contain;
+}
 
+/* title */
+#title{
+    margin-left: 11rem; /* 11rem is width od navbar*/
+    margin-right: -0.5rem;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3rem 15% 2rem 6rem;
+}
+#title h1{
+    margin-top: -5px;
+}
+#title ul{
+    list-style-type: none;
+    color: gray;
+    padding-left: 0;
+}
+#title ul i{
+    color: #E8A142;
+    font-size: 1rem;
+}
+#title .soc-med ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+#title .soc-med i{
+    padding-top: 2rem;
+    font-size: 3rem;
+    transition: linear 0.5s;
+}
+#title .soc-med i:hover{
+    transform: scale(1.5) translateY(-0.4rem);
+}
+#my_photo{
+    width: 20rem;
+    height: auto;
+    size: contain;
+    border-radius: 20px;
+    transition: linear 0.5s;
+    border: 5px solid white;
+}
+#my_photo:hover{
+    box-shadow: 0 0 15px #272B29;
+    transition: linear 0.5s;
+}
 
+/* main */
+main{
+    margin-left: 11rem; /* 11rem is width od nav*/
+    padding: 1rem 6rem;
+    background-color: white;
+}
+section{
+    padding-bottom: 3rem;
+}
+section li{
+    list-style-image: url('img/shears.jpg');
+}
+/* about */
+section::before{
+    content: "";
+    display: block;
+    height: 70px;
+    background-image: url('img/sewing_machine.jpg');
+    background-repeat: repeat-x;
+    background-position: left bottom;
+    margin-left: -5rem;
+    margin-right: -6rem;
+}
 
+/* work */
+.slide img{
+    height: 40rem;
+    width: auto;
+}
+.slide-show .slide:not(:first-child){
+    display: none;
+}
+.all-img{
+    display: flex;
+    flex-wrap: wrap;
+}
+.all-img .small-img{
+    height: 5rem;
+    cursor: pointer;
+    opacity: 0.3;
+    padding-top: 1rem;
+    padding-right: 0.5rem;
+}
+.all-img .opacity{
+    opacity: 1;
+}
+.small-img:hover{
+    opacity: 1;
+}
 
-/************************************* mobile layout *************************************/
+/* contact */
+#contact ul{
+    color: gray;
+    padding-left: 0;
+}
+#contact ul li{
+    list-style-image: none;
+    list-style-type: none;
+}
+#contact ul i{
+    color: #E8A142;
+    font-size: 1rem;
+}
+#contact .soc-med ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding: 2rem 0;
+}
+#contact .soc-med ul li{
+    padding-right: 2rem;
+}
+#contact .soc-med i{
+    padding-top: 2rem;
+    font-size: 3rem;
+    transition: linear 0.5s;
+}
+#contact .soc-med i:hover{
+    transform: scale(1.5) translateY(-0.4rem);
+}
+#contact::after{
+    content: "";
+    display: block;
+    height: 70px;
+    background-image: url('img/sewing_machine.jpg');
+    background-repeat: repeat-x;
+    background-position: left bottom;
+    margin-left: -5rem;
+    margin-right: -6rem;
+}
+
+/* footer */
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 17rem;
+    margin-top: -4rem;
+    padding-right: 3rem;
+}
+
+/********************************** tablet layout **********************************/
+@media only screen and (min-width: 576px) and (max-width: 991px){
+    #menu{
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        height: fit-content;
+        justify-content: right;
+        flex-wrap: wrap;
+        padding: 0 4rem;
+        margin-top: -8rem;
+    }
+    #menu li{
+        padding: 0.5rem;
+    }
+    #menu img{
+        width: 80px;
+    }
+    #menu a{
+        font-size: 1.5rem;
+    }
+    #title{
+        margin: 0;
+        margin-top: 8rem;
+        padding: 1rem;
+    }
+    #my_photo{
+        width: 10rem;
+        height: 13rem;
+    }
+
+    main{
+        margin: 0;
+        padding: 1rem;
+    }
+    .slide img{
+        height: 30rem;
+        width: auto;
+    }
+    section::before{
+        margin: 0;
+    }
+    #contact::after{
+        margin: 0;
+    }
+    
+    footer{
+        margin: 0;
+        padding: 1rem;
+    }
+}
+
+/********************************** mobile layout **********************************/
+@media only screen and (max-width: 575px){
+    #menu{
+        display: flex;
+        flex-direction: row;
+        width: 95%;
+        height: fit-content;
+        justify-content: right;
+        padding: 0 1rem;
+        padding-top: 0;
+        margin-top: -6rem;  
+        flex-wrap: wrap;  
+    }
+    #menu img{
+        top: 5px;
+        left: 5px;
+        width: 2.5rem;
+    }
+    #menu li{
+        padding: 0.5rem;
+    }
+    #menu a{
+        font-size: 1rem;
+    }
+    #title{
+        margin: 0;
+        margin-top: 6rem;
+        padding: 1rem;
+    }
+    #my_photo{
+        width: 10rem;
+        height: 13rem;
+    }
+
+    main{
+        margin: 0;
+        padding: 1rem;
+    }
+    .slide img{
+        height: 30rem;
+        width: auto;
+    }
+    section::before{
+        margin: 0;
+    }
+    #contact::after{
+        margin: 0;
+    }
+    
+    footer{
+        margin: 0;
+        padding: 1rem;
+    }
+}
